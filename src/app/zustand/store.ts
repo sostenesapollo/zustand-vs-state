@@ -10,8 +10,8 @@ interface Store {
 }
 
 export const useStore = create<Store>((set) => ({
-  user: { name: "", age: "" },
-  users: [],
+  user: { name: "Joao", age: "12" },
+  users: [ { name: "Joao", age: "12" },  { name: "Joao", age: "12" }],
   setUser: (user) => set({ user }), // Atualiza o estado do formulário
   addUser: (user) => set((state) => ({ users: [...state.users, user] })),
   removeUser: (index) =>
